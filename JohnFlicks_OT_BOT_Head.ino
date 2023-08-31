@@ -364,22 +364,6 @@ const unsigned char leftLooking[] PROGMEM = {
   0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00  // ................................................................................................................................
 };
 
-void display_JF(){
-  display.clearDisplay();
-  display.setTextSize(2);
-  display.setTextColor(WHITE);
-  display.setCursor(40,15);  
-  display.println("JOHN");
-  display.display();
-
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(48,35);  
-  display.println("Flicks");
-  display.display();
-  delay(2000);
-}
-
 void blink_eye(){
   display.clearDisplay();
   display.drawBitmap(0,0,opened_eye,128,64,WHITE);
@@ -496,7 +480,6 @@ void setup() {
   }
   display.clearDisplay();
 
-  display_JF();
   eyeMoves();
   lookaround();
   
